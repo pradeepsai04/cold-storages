@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Rentals</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body >
+        <div class="header">
+            
+            <nav id="navBar" class="hidemenu">
+                <a href="page.html">
+                    <img src="images/page.png" class="logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Popular Places</a></li>
+                    <li><a href="{% static 'page2.html' %}">Explore</a></li>
+                    <li><a href="page3.html">Online</a></li>
+                </ul>
+                <a href="#" class="register-btn">Register Now</a>
+                <i class="fas fa-bars" onclick="togglebtn()"></i>
+            </nav>
+            <div class="container">
+               <h1>Book your House</h1>
+                <div class="search-bar">
+                    <form>
+                        <div class="location-input">
+                            <label>Location</label>
+                            <input type="text" placeholder="Where you want to Stay?">
+                        </div>
+                        <div>
+                            <label>Check In</label>
+                            <input type="text" placeholder="Add Date">
+                        </div>
+                        <div>
+                            <label>Check Out</label>
+                            <input type="text" placeholder="Add Date">
+                        </div>
+                        <div>
+                            <label>Guest</label>
+                            <input type="text" placeholder="Add Guest">
+                       </div>
+                        <button type="submit"><img src="images\search.png"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="sub-title">Exclusives</h2>
+            <div class="exclusives">
+                {% for p in d %}
+                
+                <div>
+                    <img src="{{p.img.url}}"> 
+                    
+                    <p>Starts @ ${{p.age}}</p>
+                    <h3>House belongs to {{p.name}}</h3>
+                </div>
+               {%   endfor %} 
+                    
+        </div>  
+        <a href="#" class="contribute">Contribute</a>
+        <div class="about">
+            <h2>About website</h2>
+            <p>Hi this website allows you to Explore the apartments which can be occupied for your stay. This is made for the use of People for House Rental purpose</p>
+        </div>
+        <form action="next" >
+            next:<input type="submit">
+            <a href="register" >REGISTER HERE</a>
+
+        </form>
+        
+
+        <div class="footer">
+            <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <hr>
+            <p></p>
+        </div>
+        </div>
+
+
+        <script>
+            var navBar=document.getElementById("navBar");
+            function togglebtn(){
+                navBar.classList.toggle("hidemenu");
+            }
+        </script>
+    </body>
+</html>
