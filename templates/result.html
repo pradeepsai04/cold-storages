@@ -1,18 +1,33 @@
 {% extends 'base.html' %} 
 {%block content%}
-<h1> the result as :{{result}}</h1>
+<h1> register here :{{result}}</h1>
 
-<form action="register" method="post">
+
+
+</form>
+<h1> give houses owner details</h1>
+<form action="register2" method="post">
     {%  csrf_token %}
-    firstname:<input type="text" name="firstname"><br><br>
-    lastname:<input type="text" name="lastname"><br>    <br>
-    username:<input type="text" name="username"><br><br>
-    password:<input type="password" name="password1"><br><br>
-   
-    email:<input type="email" name="email"><br><br>
-    location:<input type="text" name="location"><br><br>
-    <br>
+    OWNER Name:<input type="text" name="name"><br><br>
+    COST:<input type="text" name="age"><br>    <br>
+    HOUSE Image:<input type="file" name="image"><br><br>
+    ADDRESS:<input type="text" name="college"><br><br>
+    ENTER LOCATION:<input type="text" name="url">
+    <br><br>
+
     submit:<input type="submit">
 
 </form>
+
+
+<h1>upload house details</h1>
+<form action="next" method="post">
+    {% csrf_token   %}
+    HOUSE_TYPE:<input type="text" name="housetype"><br><br>
+    COST:<input type="text" name="cost"><br><br>
+    IMAGE:<input type="file" name="image"><br><br>
+    FACILITY:<input type="text" name="facility"><br><br>
+    PHONE:<input type="text" name="phone"><br><br>
+    SUBMIT:<input type="submit">
+  </form>  
 {% endblock%}

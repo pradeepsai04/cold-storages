@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,15 +12,35 @@
         <div class="header">
             
             <nav id="navBar" class="hidemenu">
-                <a href="page.html">
-                    <img src="images/page.png" class="logo">
+                <a href="/">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.MU_rCC8lKECqPGmExbJ1dQHaE8&pid=Api&P=0&w=253&h=168" class="logo">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#" class="active">Popular Places</a></li>
-                    <li><a href="{% static 'page2.html' %}">Explore</a></li>
-                    <li><a href="page3.html">Online</a></li>
+                  <li> <a href="#trending">
+                    Trending places     
+                  </a>
+                    </li>
+                    <li><a href="uploaded">Explore</a></li>
+                    <li><a href="#exclusives">Exclusive Places</a></li>
                 </ul>
-                <a href="#" class="register-btn">Register Now</a>
+                <label for="cars">Choose a car:</label>
+
+          <b> <select name="links" id="hello" size="1" style="max-width:100%"  onchange="window.location.href=this.value;">
+            <option value="register">facebook</option></a>
+            <option value="https://youtude.com/">youtube</option></a>
+            <option value="https://twitter.com/">Twitter</option>
+            <option value="https://google.com/">GOOGLE</option>
+            <option value="https://facebook.com/">facebook</option></a>
+            <option value="https://youtude.com/">youtube</option></a>
+            <option value="https://twitter.com/">Twitter</option>
+            <option value="https://google.com/">GOOGLE</option>
+            <option value="https://facebook.com/">facebook</option></a>
+            <option value="https://youtude.com/">youtube</option></a>
+            <option value="https://twitter.com/">Twitter</option>
+            <option value="https://google.com/">GOOGLE</option>
+            </select>
+            </b>
+                <a href="projectregister" class="register-btn">Register Now</a>
                 <i class="fas fa-bars" onclick="togglebtn()"></i>
             </nav>
             <div class="container">
@@ -27,7 +48,7 @@
                 <div class="search-bar">
                     <form>
                         <div class="location-input">
-                            <label>Location</label>
+                            <li>Location</li>
                             <input type="text" placeholder="Where you want to Stay?">
                         </div>
                         <div>
@@ -39,39 +60,94 @@
                             <input type="text" placeholder="Add Date">
                         </div>
                         <div>
-                            <label>Guest</label>
-                            <input type="text" placeholder="Add Guest">
+                           <ul> 
+                            
+                           
+                           </ul>
                        </div>
-                        <button type="submit"><img src="images\search.png"></button>
+                        <button type="submit"><img src="https://tse1.mm.bing.net/th?id=OIP.MU_rCC8lKECqPGmExbJ1dQHaE8&pid=Api&P=0&w=253&h=168"></button>
                     </form>
                 </div>
             </div>
         </div>
         <div class="container">
-            <h2 class="sub-title">Exclusives</h2>
+            <section id="exclusives">
+            <h2 class="sub-title" >Exclusives houses</h2>
             <div class="exclusives">
-                {% for p in d %}
+                {% for p in interface1 %}
                 
-                <div>
-                    <img src="{{p.img.url}}"> 
+                <div >
                     
-                    <p>Starts @ ${{p.age}}</p>
-                    <h3>House belongs to {{p.name}}</h3>
+                    
+                   
+                    
+                    <img class="raju" src="{{p.IMAGE.url}}">
+                    <h3>{{i.PLACE}}</h3>
+                    <h4><p>Starts @ ${{p.PRICE}}</p></h4>
+                    
                 </div>
-               {%   endfor %} 
+               {%   endfor %}
+            </div>        
+            </section>
+            <section id="trending">
+            <h2 class="sub-title">Trending Places</h2>
+    
+            <div class="trending">
+
+                {% for i in interface2%}
+                <div>
+                    <img src="{{i.IMAGE.url}}">
+                    <h3>{{i.PLACE}}</h3>
+                    <h3>starts @ ${{i.PRICE}}</h3>
+                </div>
+               
+                {%  endfor %}
+            </div>
+            </section>
+            <div class="cta">
+                <h3>Share</h3>
+                <p>If you Like our page <br>Please Share.</p>
+                <a href="#" class="cta-btn">Know More</a>
+            </div>  
+            <h2 class="sub-title">Feedback</h2>
+            <div class="feedback">
+                <div>
+                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
+                    <p>Popular places</p>
+                </div>
+                <div>
+                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
+                    <p>Popular places2</p>
+                </div>
+                <div>
+                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
+                    <p>Popular places3</p>
+                </div>
+            </div>  
+
+
+
+
+
+
+
+               
                     
-        </div>  
+        
         <a href="#" class="contribute">Contribute</a>
         <div class="about">
             <h2>About website</h2>
             <p>Hi this website allows you to Explore the apartments which can be occupied for your stay. This is made for the use of People for House Rental purpose</p>
         </div>
-        <form action="next" >
-            next:<input type="submit">
-            <a href="register" >REGISTER HERE</a>
-
-        </form>
         
+
+            <br>
+            <br>
+            
+        
+
+            
+    
 
         <div class="footer">
             <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
