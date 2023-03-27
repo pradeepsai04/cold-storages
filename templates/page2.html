@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Rentals 2</title>
+        <title>Markets and Cold Storages</title>
         <link rel="stylesheet" href="{% static 'projectstyle.css' %}">
         
         <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
@@ -14,14 +14,14 @@
                 <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/190767694.jpg?k=a57de774e2f0cc3aec83bc2c03940ac029e25254b5c263294d6f65a585b01a8a&o=" class="logo">
             </a>
             <ul class="nav-links">
-                <li><a href="/page1#exclusives" >Exclusive Places</a></li>
+                <li><a href="/page1#exclusives" >Cold Storage Places</a></li>
                 <li><a href="uploaded" class="active">Explore</a></li>
-                <li><a href="/page1#exclusives">Trending Places</a></li>
+                <li><a href="/page1#trending"> Market places</a></li>
             </ul>
-            <form method="get" class="nav-links">
+            <form action="uploaded" method="get" class="nav-links">
                 
-            
-                <select type="text" name="state" id="state" >
+        
+                <select type="text" name="district" id="district" >
                     <option value="">--Please select district</option>
                     <option value="vizag">vizag</option>
                     <option value="krishna">krishna</option>
@@ -48,15 +48,15 @@
            
                 <select name="area" id="area">
                     <option value="">--Please choose an area--</option>
-                    <option value="rural">rural area</option>
-                    <option value="urban">urban area</option>
+                    <option value="market">market</option>
+                    <option value="cold storage">cold storage</option>
                     
                 </select>
                 
                 <input type="submit" value="search"/>
             </form>
 
-            <a href="register" class="register-btn1">Upload HOUSE</a>
+            <a href="register" class="register-btn1" align ="center">Upload Cold Storages/Markets</a>
             <i class="fas fa-bars" onclick="togglebtn()"></i>
         </nav>
         <div class="container">
@@ -68,7 +68,7 @@
                     <section id="i.OWNER_NAME">
                     <div class="house">
                         <div class="house-img">
-                            <a href="/next#{{i.OWNER_NAME}}"><img src="{{i.UPLOAD_HOUSE_IMAGE.url}}"></a>
+                            <a href="/next#{{i.OWNER_NAME}}"><img src="{{i.UPLOAD_IMAGE1.url}}"></a>
                         </div>
                         <div class="house-info">
                             <p>Private house</p>
@@ -82,7 +82,7 @@
                             <i class="far fa-star"></i>
                             <div class="house-price">
                                 <p>Price</p>
-                                <h4>${{i.COST}}<span>  /month</span></h4>
+                                <h4>Rs:{{i.COST}}<span> /- per tonne</span></h4>
                                 <h4>{{i.AREA}}</h4>
                                 <h3>{{i.STATE}}</h3>
                             </div>
@@ -97,35 +97,35 @@
                 <div class="right-col">
                     <div class="sidebar">
                         <h2>Select Filters</h2>
-                        <h3>Property Type</h3>
+                        <h3>Property Market</h3>
                         <form action="" method="post">
                         <div class="filter">
-                            <input type="checkbox"> <p>House</p> <span>(0)</span>
+                            <input type="checkbox"> <p>Markets for raw materials</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Hostel</p> <span>(0)</span>
+                            <input type="checkbox"> <p>daily usage</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Flat</p> <span>(0)</span>
+                            <input type="checkbox"> <p>reuseable materials</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Villa</p> <span>(0)</span>
+                            <input type="checkbox"> <p>urban area markets</p> <span>(0)</span>
                         </div>
-                        <h3>Amenities</h3>
+                        <h3>cold stroages</h3>
                         <div class="filter">
-                            <input type="checkbox"> <p>Air Conditioning</p> <span>(0)</span>
-                        </div>
-                        <div class="filter">
-                            <input type="checkbox"> <p>Wifi</p> <span>(0)</span>
+                            <input type="checkbox"> <p>cold storages for raw materials</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Gym</p> <span>(0)</span>
+                            <input type="checkbox"> <p>daily usage</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Pool</p> <span>(0)</span>
+                            <input type="checkbox"> <p>reuseable materials</p> <span>(0)</span>
                         </div>
                         <div class="filter">
-                            <input type="checkbox"> <p>Kitchen</p> <span>(0)</span>
+                            <input type="checkbox"> <p>urban area cold stroages</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p></p> <span>(0)</span>
                         </div>
                         <div class="sidebar-link">
                             <a href="#">View More</a>

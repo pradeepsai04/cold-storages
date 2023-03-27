@@ -4,8 +4,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Rentals</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Page</title>
+        <link rel="stylesheet" href="{% static 'style1.css' %}">
         <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     </head>
     <body >
@@ -17,62 +17,26 @@
                 </a>
                 <ul class="nav-links">
                   <li> <a href="#trending">
-                    Trending places     
+                    Market places     
                   </a>
                     </li>
                     <li><a href="uploaded">Explore</a></li>
-                    <li><a href="#exclusives">Exclusive Places</a></li>
+                    <li><a href="#exclusives">Cold stroage Places</a></li>
                 </ul>
-                <label for="cars">Choose a car:</label>
+                <label for="cars">Choose a Market/storage:</label>
 
-          <b> <select name="links" id="hello" size="1" style="max-width:100%"  onchange="window.location.href=this.value;">
-            <option value="register">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            <option value="https://facebook.com/">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            <option value="https://facebook.com/">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            </select>
-            </b>
+          
                 <a href="projectregister" class="register-btn">Register Now</a>
                 <i class="fas fa-bars" onclick="togglebtn()"></i>
             </nav>
             <div class="container">
-               <h1>Book your House</h1>
-                <div class="search-bar">
-                    <form>
-                        <div class="location-input">
-                            <li>Location</li>
-                            <input type="text" placeholder="Where you want to Stay?">
-                        </div>
-                        <div>
-                            <label>Check In</label>
-                            <input type="text" placeholder="Add Date">
-                        </div>
-                        <div>
-                            <label>Check Out</label>
-                            <input type="text" placeholder="Add Date">
-                        </div>
-                        <div>
-                           <ul> 
-                            
-                           
-                           </ul>
-                       </div>
-                        <button type="submit"><img src="https://tse1.mm.bing.net/th?id=OIP.MU_rCC8lKECqPGmExbJ1dQHaE8&pid=Api&P=0&w=253&h=168"></button>
-                    </form>
-                </div>
+               <h1><br/></h1>
+               
             </div>
         </div>
         <div class="container">
             <section id="exclusives">
-            <h2 class="sub-title" >Exclusives houses</h2>
+            <h2 class="sub-title" >Cold storage Places</h2>
             <div class="exclusives">
                 {% for p in interface1 %}
                 
@@ -90,7 +54,7 @@
             </div>        
             </section>
             <section id="trending">
-            <h2 class="sub-title">Trending Places</h2>
+            <h2 class="sub-title">Market Places</h2>
     
             <div class="trending">
 
@@ -112,16 +76,16 @@
             <h2 class="sub-title">Feedback</h2>
             <div class="feedback">
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
-                    <p>Popular places</p>
+                    <img src="https://images.pexels.com/photos/513044/pexels-photo-513044.jpeg?auto=compress&cs=tinysrgb&w=600.JPG">
+                    <p>Popular Markets</p>
                 </div>
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
-                    <p>Popular places2</p>
+                    <img src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&w=700.jpg">
+                    <p>Popular Markets 2</p>
                 </div>
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
-                    <p>Popular places3</p>
+                    <img src="https://images.pexels.com/photos/175694/pexels-photo-175694.jpeg?auto=compress&cs=tinysrgb&w=600.jpg">
+                    <p>Popular Markets 3</p>
                 </div>
             </div>  
 

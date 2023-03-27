@@ -662,9 +662,6 @@ nav.navbar-white .fa-bars{
     padding: 15px 50px;
     border: 1px solid #ff5361;
 }
-body{
-    background-size: cover;
-}
 /*---------media--------*/
 @media only screen and (max-width: 700px) {
     .house-details{
@@ -710,15 +707,4 @@ body{
     .contact-host{
         margin: 40px 0;
     }
-}
-iframe{
-    width:30%;
-    height:200px;
-    
-}
-image.raju
-{ width:25px;
-    height:30px;
-
-
 }

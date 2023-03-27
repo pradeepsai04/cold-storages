@@ -5,9 +5,13 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Details</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'style1.css' %}">
         <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
-    </head>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>    
+</head>
     <body>
         <nav id="navBar" class="navbar-white">
             <a href="/">
@@ -26,7 +30,7 @@
         <section id="{{j.OWNER_NAME}}">
         <div class="house-details">
             <div class="house-title">
-                <h1>Wedge House</h1>
+                <h1>{{j.CHOOSE_TYPE}}</h1>
                 <div class="row">
                     <div>
                         <i class="fas fa-star"></i>
@@ -42,18 +46,18 @@
                 </div>
             </div>
             <div class="gallery">
-                <div class="gallery-img-1"><img src="{{j.UPLOAD_HOUSE_IMAGE.url}}"></div>
-                <div><img src="{{j.UPLOAD_HOUSE_IMAGE2.url}}"></div>
-                <div><img src="{{j.UPLOAD_HOUSE_IMAGE3.url}}"></div>
-                <div><img src="{{j.UPLOAD_HOUSE_IMAGE2.url}}"></div>
-                <div><img src="{{j.UPLOAD_HOUSE_IMAGE3.url}}"></div>
+                <div class="gallery-img-1"><img src="{{j.UPLOAD_IMAGE1.url}}"></div>
+                <div><img src="{{j.UPLOAD_IMAGE2.url}}"></div>
+                <div><img src="{{j.UPLOAD_IMAGE3.url}}"></div>
+                <div><img src="{{j.UPLOAD_IMAGE2.url}}"></div>
+                <div><img src="{{j.UPLOAD_IMAGE3.url}}"></div>
             </div>    
                 
           <h2>  <a href="{{j.ENTER_LOCATION}}"><i>View Location</i></a>   </h2>
             <div class="small-details">
-                <h2>Entire rental unit hosted by no-name</h2>
-                <p>2 Guest &nbsp; &nbsp; 2 beds &nbsp; &nbsp; 1 Bathroom</p>
-                <h4>$100 / day</h4>
+                <span><h2>Entire {{j.CHOOSE_TYPE}} unit hosted by <h1>mr/mrs: {{j.OWNER_NAME}}</h1></h2></span>  
+                <p></p>
+                <h4>Rs:{{j.COST}}<span> /- per tonne</span></h4>
             </div>
             <hr class="line">
             <form class="check-form">
@@ -72,7 +76,7 @@
                 <button type="submit">Check Avalibility</button>
             </form>
             <ul class="details-list">
-                <li><i class="fas fa-home"></i>Enter home
+                <li><i class="fas fa-home"></i>Enter to the {{j.CHOOSE_TYPE}}
                     <span>You will have the entire flat for you</span>
                 </li>
                 <li><i class="fas fa-map-marker-alt"></i>Great Location
@@ -93,7 +97,7 @@
             </div>
             <hr class="line">
             <div class="host">
-                <img src="images/image-s5.png" height="75">
+               <a href="#" ><img src="{{j.UPLOAD_IMAGE1.url}}" height="75"></a>
                 <div>
                     <h2>Hosted by Someone</h2>
                     <p><span>

@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home Rentals</title>
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>cold storages</title>
+        <link rel="stylesheet" href="{% static 'style1.css' %}">
         <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     </head>
     <body >
@@ -25,54 +25,18 @@
                 </ul>
                 <label for="cars">Choose a car:</label>
 
-          <b> <select name="links" id="hello" size="1" style="max-width:100%" onchange="window.location.href=this.value;">
-            <option value="register">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            <option value="https://facebook.com/">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            <option value="https://facebook.com/">facebook</option></a>
-            <option value="https://youtude.com/">youtube</option></a>
-            <option value="https://twitter.com/">Twitter</option>
-            <option value="https://google.com/">GOOGLE</option>
-            </select>
-            </b>
+         <a href="excel" ><h1>excel info</h1></a>
                 <a href="projectregister" class="register-btn">Register Now</a>
                 <i class="fas fa-bars" onclick="togglebtn()"></i>
             </nav>
             <div class="container">
-               <h1>Book your House</h1>
-                <div class="search-bar">
-                    <form>
-                        <div class="location-input">
-                            <li>Location</li>
-                            <input type="text" placeholder="Where you want to Stay?">
-                        </div>
-                        <div>
-                            <label>Check In</label>
-                            <input type="text" placeholder="Add Date">
-                        </div>
-                        <div>
-                            <label>Check Out</label>
-                            <input type="text" placeholder="Add Date">
-                        </div>
-                        <div>
-                           <ul> 
-                            
-                           
-                           </ul>
-                       </div>
-                        <button type="submit"><img src="https://tse1.mm.bing.net/th?id=OIP.MU_rCC8lKECqPGmExbJ1dQHaE8&pid=Api&P=0&w=253&h=168"></button>
-                    </form>
-                </div>
+               <h1></h1><br /><br />
+                
             </div>
         </div>
         <div class="container">
             <section id="exclusives">
-            <h2 class="sub-title" >Exclusives houses</h2>
+            <h2 class="sub-title" >Top Cold Storages</h2>
             <div class="exclusives">
                 {% for p in interface1 %}
                 
@@ -82,15 +46,16 @@
                    
                     
                     <img class="raju" src="{{p.IMAGE.url}}">
-                    <h3>{{i.PLACE}}</h3>
+                    <h3>{{p.PLACE}}</h3>
                     <h4><p>Starts @ ${{p.PRICE}}</p></h4>
+                    <h4>{{p.PLACE}}</h4>
                     
                 </div>
                {%   endfor %}
             </div>        
             </section>
             <section id="trending">
-            <h2 class="sub-title">Trending Places</h2>
+            <h2 class="sub-title">Trending Markets</h2>
     
             <div class="trending">
 
@@ -112,16 +77,16 @@
             <h2 class="sub-title">Feedback</h2>
             <div class="feedback">
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
+                    <img src="https://images.pexels.com/photos/513044/pexels-photo-513044.jpeg?auto=compress&cs=tinysrgb&w=600.JPG">
                     <p>Popular places</p>
                 </div>
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
-                    <p>Popular places2</p>
+                    <img src="https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?auto=compress&cs=tinysrgb&w=700.jpg">
+                    <p>Popular places 2</p>
                 </div>
                 <div>
-                    <img src="https://skift.com/wp-content/uploads/2021/12/downtown-g8e387ceb3_1280-e1640267416362-1024x683.jpg">
-                    <p>Popular places3</p>
+                    <img src="https://images.pexels.com/photos/175694/pexels-photo-175694.jpeg?auto=compress&cs=tinysrgb&w=600.jpg">
+                    <p>Popular places 3</p>
                 </div>
             </div>  
 
@@ -137,7 +102,7 @@
         <a href="#" class="contribute">Contribute</a>
         <div class="about">
             <h2>About website</h2>
-            <p>Hi this website allows you to Explore the apartments which can be occupied for your stay. This is made for the use of People for House Rental purpose</p>
+            <p>Hi this website allows you to Explore the cold storages and different markets for storing the crop and also for selling them. This is made for the use of farmers for storing the crops in cold stroges ,which helps in preventing the damage of the produced food</p>
         </div>
         
 
