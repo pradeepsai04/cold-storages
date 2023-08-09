@@ -33,9 +33,11 @@ class MILL(models.Model):
 
     ])    
 
+    VIDEO=models.FileField(upload_to='videos/',default="NULL")
     def __str__(self):
         return self.OWNER_NAME
 
+  
   
 
 # admin created houses

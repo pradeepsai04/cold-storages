@@ -106,6 +106,8 @@ def uploaded(request):
         if state!=None and price!=None and area!=None:
             
                 dests=MILL.objects.filter(STATE=state,COST__lt=price,CHOOSE_TYPE=area)
+                a=MILL.objects.all()
+                print("the lenght",len(a))
                 
             
     return render(request,'page2.html',{"dests":dests}) 

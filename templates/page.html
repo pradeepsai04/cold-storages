@@ -60,9 +60,12 @@
 
                 {% for i in interface2%}
                 <div>
-                    <img src="{{i.IMAGE.url}}">
+                    <img src="/media/{{IMAGE.url}}"> or {{i.IMAGE.url}}
                     <h3>{{i.PLACE}}</h3>
                     <h3>starts @ ${{i.PRICE}}</h3>
+                    
+                    
+
                 </div>
                
                 {%  endfor %}

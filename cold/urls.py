@@ -13,7 +13,7 @@ urlpatterns=[
 path("excel",views.excelsheet,name="excel"),#for excel page
 path("my_view/",views.my_view,name="my_view"),
 path("logout",views.logoutUser,name="logout"),
-
+path("ready/",views.ready,name="ready"),
 
 
 ]
